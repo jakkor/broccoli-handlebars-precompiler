@@ -1,0 +1,28 @@
+{
+  "name": "broccoli-handlebars-precompiler",
+  "description": "Precompiles handlebars templates",
+  "version": "0.0.1",
+  "author": {
+    "name": "Jakub Korupczynski",
+    "email": "jakub.korupczynski@gmail.com"
+  },
+  "main": "index.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "broccoli-plugin",
+    "handlebars",
+    "javascript"
+  ],
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "devDependencies": {
+    "broccoli-filter": "^0.1.14",
+    "handlebars": "^3.0.3"
+  }
+}
