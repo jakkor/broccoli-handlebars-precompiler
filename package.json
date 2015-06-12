@@ -1,7 +1,7 @@
 {
   "name": "broccoli-handlebars-precompiler",
   "description": "Precompiles handlebars templates",
-  "version": "0.0.1",
+  "version": "0.0.1.1",
   "author": {
     "name": "Jakub Korupczynski",
     "email": "jakub.korupczynski@gmail.com"
@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/jakkor/broccoli-handlebars-precompiler/issues"
   },
-  "devDependencies": {
+  "dependencies": {
     "broccoli-filter": "^0.1.14",
     "handlebars": "^3.0.3"
   }
