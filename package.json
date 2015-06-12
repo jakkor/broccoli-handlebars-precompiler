@@ -10,7 +10,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/jakkor/broccoli-handlebars-precompiler.git"
   },
   "keywords": [
     "broccoli-plugin",
@@ -18,9 +18,8 @@
     "javascript"
   ],
   "bugs": {
-    "url": ""
+    "url": "https://github.com/jakkor/broccoli-handlebars-precompiler/issues"
   },
-  "homepage": "",
   "devDependencies": {
     "broccoli-filter": "^0.1.14",
     "handlebars": "^3.0.3"
