@@ -55,7 +55,7 @@ HandlebarsFilters.prototype.getTemplateName = function (srcFile) {
 
     //Remove templates path
     if (this.options.srcDir !== null) {
-      templateName = templateName.replace(this.options.templateName, '');
+      templateName = templateName.replace(this.options.srcDir, '');
     }
 
     //Remove / if there is any
