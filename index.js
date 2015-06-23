@@ -38,7 +38,7 @@ HandlebarsFilters.prototype.processString = function (string, srcFile) {
   try {
     var templateName = this.getTemplateName(srcFile);
     var precompiled = handlebars.precompile(string, this.options);
-    var output = this.options.namespace + '[\'' + templateName + '\'] = Handlebars.template(' + precompiled + ')';
+    var output = this.options.namespace + '[\'' + templateName + '\'] = Handlebars.template(' + precompiled + ');';
     return output;
   } catch (err) {
     console.log(err.message);
