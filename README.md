@@ -20,7 +20,29 @@ var tree = broccoliHandlebars(tree, {
 
 ```
 
-### Usage
+### How to use it in javascript application
+
+Sample templates files.
+
+```
+productList.hbs
+products/item.hbs
+
+```
+
+After precompiling with namespace 'App.templates' accessing those is quite easy.
+
+Templates from main folder:
+```javascript
+App.templates.productList({hondaCivic:"Honda Civic for sale", citroenXsara:"Citroen Xsara for sale"});
+```
+
+Templates from subfolders:
+```javascript
+App.templates["products/item"]({name:"Honda Civic", price:"10.000"});
+```
+
+### Usage in Broccoli file
 
 ```js
 var tree = broccoliHandlebars(tree, options);
