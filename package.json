@@ -22,6 +22,6 @@
   },
   "dependencies": {
     "broccoli-filter": "^0.1.14",
-    "handlebars": "^3.0.3"
+    "handlebars": "^4.0.2"
   }
 }
