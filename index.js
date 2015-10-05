@@ -1,4 +1,5 @@
-var Filter = require('broccoli-filter'),
+var path = require('path'),
+    Filter = require('broccoli-filter'),
     handlebars = require('handlebars');
 
 module.exports = HandlebarsFilters;
@@ -38,7 +39,8 @@ HandlebarsFilters.prototype.processString = function (string, srcFile) {
   try {
     var templateName = this.getTemplateName(srcFile);
     var precompiled = handlebars.precompile(string, this.options);
-    var output = this.options.namespace + '[\'' + templateName + '\'] = Handlebars.template(' + precompiled + ');';
+    var output = this.options.namespace + ' = ' + this.options.namespace + ' || {};';
+    output += this.options.namespace + '[\'' + templateName + '\'] = Handlebars.template(' + precompiled + ');';
     return output;
   } catch (err) {
     console.log(err.message);
@@ -51,10 +53,10 @@ HandlebarsFilters.prototype.processString = function (string, srcFile) {
  * @return {string} template name
  */
 HandlebarsFilters.prototype.getTemplateName = function (srcFile) {
-    var templateName = srcFile;
+    var templateName = srcFile, regexp;
 
     //Remove templates path
-    if (this.options.srcDir !== null) {
+    if (this.options.srcDir && this.options.srcDir !== '.') {
       templateName = templateName.replace(this.options.srcDir, '');
     }
 
@@ -64,12 +66,10 @@ HandlebarsFilters.prototype.getTemplateName = function (srcFile) {
     }
 
     //Remove extension
-    for (var i = 0; i < this.options.extensions.length; i++) {
-      var ext = '.' + this.options.extensions[i];
-      var extPos = templateName.indexOf(ext);
-      if (extPos > -1 && extPos === (templateName.length - ext.length)) {
-        templateName = templateName.substr(0, extPos);
-      }
+    var ext = path.extname(templateName);
+    if (this.options.extensions.indexOf(ext.replace('.', '')) >= 0) {
+      regexp = new RegExp(ext + '$');
+      templateName = templateName.replace(regexp, '');
     }
 
     return templateName;
