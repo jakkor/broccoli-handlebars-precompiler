@@ -1,7 +1,7 @@
 {
   "name": "broccoli-handlebars-precompiler",
   "description": "Precompiles handlebars templates",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": {
     "name": "Jakub Korupczynski",
     "email": "jakub.korupczynski@gmail.com"
