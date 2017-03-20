@@ -8,9 +8,8 @@ HandlebarsFilters.prototype = Object.create(Filter.prototype);
 HandlebarsFilters.prototype.constructor = HandlebarsFilters;
 
 function HandlebarsFilters (tree, options) {
-  if (!(this instanceof HandlebarsFilters))
-  {
-      return new HandlebarsFilters(tree, options);
+  if (!(this instanceof HandlebarsFilters)) {
+    return new HandlebarsFilters(tree, options);
   }
 
   if (!('srcDir' in options)) {
