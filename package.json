@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "broccoli-file-creator": "^1.0.1",
-    "broccoli-filter": "^0.1.14",
+    "broccoli-filter": "^1.2.4",
     "broccoli-merge-trees": "^1.1.0",
     "handlebars": "^4.0.2"
   }
